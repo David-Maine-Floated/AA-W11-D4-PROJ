@@ -6933,3 +6933,128 @@ Migrating to FixUniqueIndexOnPokemon (20240104195428)
   [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("id", "name", "price", "happiness", "image_url", "pokemon_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["id", 600], ["name", "big_lil_thicky"], ["price", 666], ["happiness", 50], ["image_url", "/fakeass/url"], ["pokemon_id", 2], ["created_at", "2024-01-04 20:20:09.194013"], ["updated_at", "2024-01-04 20:20:09.194013"]]
   [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2024-01-04 16:43:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/davidmaine/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/davidmaine/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 526)
+Completed 200 OK in 519ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 965795)
+
+
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:44:11 -0500
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"types"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 5603)
+
+
+
+NameError - undefined local variable or method `id' for #<Api::PokemonController:0x00000000005118>
+        @pokemon = Pokemon.find_by(id: params[id])
+                                              ^^:
+  app/controllers/api/pokemon_controller.rb:33:in `show'
+
+Started POST "/__better_errors/0c41617ec8b63732/variables" for ::1 at 2024-01-04 16:44:11 -0500
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:45:47 -0500
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"types"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 4451)
+
+
+
+NameError - undefined local variable or method `id' for #<Api::PokemonController:0x000000000086b0>
+        @pokemon = Pokemon.find_by(id: params[id])
+                                              ^^:
+  app/controllers/api/pokemon_controller.rb:16:in `show'
+
+Started POST "/__better_errors/399df2a66b0e892c/variables" for ::1 at 2024-01-04 16:45:47 -0500
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:45:57 -0500
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"types"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2559)
+
+
+
+NameError - undefined local variable or method `id' for #<Api::PokemonController:0x00000000008700>
+        @pokemon = Pokemon.find_by(id: params[id])
+                                              ^^:
+  app/controllers/api/pokemon_controller.rb:16:in `show'
+
+Started POST "/__better_errors/a0b37c1f731598c0/variables" for ::1 at 2024-01-04 16:45:57 -0500
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:45:58 -0500
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"types"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2558)
+
+
+
+NameError - undefined local variable or method `id' for #<Api::PokemonController:0x00000000008750>
+        @pokemon = Pokemon.find_by(id: params[id])
+                                              ^^:
+  app/controllers/api/pokemon_controller.rb:16:in `show'
+
+Started POST "/__better_errors/2f8401545482e255/variables" for ::1 at 2024-01-04 16:45:58 -0500
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:45:58 -0500
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"types"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2556)
+
+
+
+NameError - undefined local variable or method `id' for #<Api::PokemonController:0x000000000087a0>
+        @pokemon = Pokemon.find_by(id: params[id])
+                                              ^^:
+  app/controllers/api/pokemon_controller.rb:16:in `show'
+
+Started POST "/__better_errors/64d4c9f668841782/variables" for ::1 at 2024-01-04 16:45:58 -0500
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:45:58 -0500
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"types"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2556)
+
+
+
+NameError - undefined local variable or method `id' for #<Api::PokemonController:0x000000000087f0>
+        @pokemon = Pokemon.find_by(id: params[id])
+                                              ^^:
+  app/controllers/api/pokemon_controller.rb:16:in `show'
+
+Started POST "/__better_errors/3fd0eaab295e5335/variables" for ::1 at 2024-01-04 16:45:58 -0500
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:47:16 -0500
+
+SyntaxError - syntax error, unexpected local variable or method, expecting `end'
+...son: 'pokemon not found' status: :not_found
+...                         ^~~~~~:
+  app/controllers/api/pokemon_controller.rb:20:in `'
+
+Started POST "/__better_errors/92bf9bf8d534d7aa/variables" for ::1 at 2024-01-04 16:47:16 -0500
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:47:40 -0500
+
+SyntaxError - syntax error, unexpected local variable or method, expecting `end'
+...son: 'pokemon not found' status: :not_found
+...                         ^~~~~~:
+  app/controllers/api/pokemon_controller.rb:19:in `'
+
+Started POST "/__better_errors/c12e417d89450909/variables" for ::1 at 2024-01-04 16:47:40 -0500
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:47:50 -0500
+
+SyntaxError - syntax error, unexpected local variable or method, expecting `end'
+...son: 'pokemon not found' status: :not_found
+...                         ^~~~~~:
+  app/controllers/api/pokemon_controller.rb:20:in `'
+
+Started POST "/__better_errors/fb20e6b05097662c/variables" for ::1 at 2024-01-04 16:47:50 -0500
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:48:11 -0500
+
+SyntaxError - syntax error, unexpected local variable or method, expecting `end'
+...son: 'pokemon not found' status: :not_found
+...                         ^~~~~~:
+  app/controllers/api/pokemon_controller.rb:20:in `'
+
+Started POST "/__better_errors/3c16ba71574804d7/variables" for ::1 at 2024-01-04 16:48:11 -0500
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:48:17 -0500
+
+AbstractController::ActionNotFound - The action 'show' could not be found for Api::PokemonController:
+
+Started POST "/__better_errors/6025437f87edf64b/variables" for ::1 at 2024-01-04 16:48:17 -0500
+Started GET "/api/pokemon/types" for ::1 at 2024-01-04 16:51:50 -0500
+Processing by Api::PokemonController#types as JSON
